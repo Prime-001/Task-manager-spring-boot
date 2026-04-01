@@ -1,0 +1,26 @@
+server:
+  port:8080
+
+spring:
+  datasource:
+    url: JDBC:mysql://localhost:3306/taskmanager_db
+    username: root
+    password: Prem@2004
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+
+  Jackson:
+    default-property-inclusion: non_null
+
+app:
+  jwt:
+    secret: mySecretKey2025PremAgrawalTaskManagerApp
+    expiration: 86400000
